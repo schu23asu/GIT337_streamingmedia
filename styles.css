@@ -1,0 +1,599 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+html {
+    background-color: #020659;
+}
+
+body {
+    width: 375px;
+    margin: 0 auto;
+    font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    position: relative;
+    background-image: linear-gradient(to right, #2104D9, #030ABC, #020873, #020659, black);
+    color: #ffffff;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #020873;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+li:hover:nth-child(2),
+li:hover:nth-child(3),
+li:hover:nth-child(4) {
+    background-color: #590242;
+}
+
+nav li:not(:first-child) {
+    text-transform: uppercase;
+}
+
+nav a {
+    font-size: 13px;
+    padding: 16px;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav img {
+    padding-left: 15%;
+}
+
+#intro {
+    width: 84%;
+    padding: 15% 0 5% 35px;
+}
+
+main {
+    position: relative;
+    background-color: #ffffff;
+}
+
+.homeTitle {
+    font-variant: small-caps;
+    position: absolute;
+    top: 0;
+    left: 24%;
+    font-size: 30px;
+}
+
+button {
+    background-color: #590242;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 6px 23px;
+    font-size: 17px;
+    margin: 10px 0 0 35px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #020659;
+}
+
+h2 {
+    color: #590242;
+    padding: 35px 0 0 35px;
+    margin-bottom: 0px;
+}
+
+dt {
+    font-style: italic;
+    float: left;
+    clear: left;
+}
+
+dd {
+    margin-left: 50px;
+    padding-bottom: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+h2,
+h3 {
+    font-size: 1em;
+}
+
+p,
+dl,
+dd {
+    font-size: 1em;
+}
+
+footer p {
+    font-size: 0.75em;
+}
+
+#trending,
+#playlists {
+    background-color: #ffffff;
+}
+
+#playlists div section {
+    padding: 12px 10px 15px 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#playlists h3 {
+    position: relative;
+    top: 0;
+    line-height: 1em;
+    margin-top: 0.3em;
+    margin-bottom: 0.6em;
+}
+
+#yourPlaylists {
+    background-color: #2699FB;
+}
+
+#yourPlaylists section {
+    background-color: #0D8DFB;
+}
+
+#curatedPlaylists {
+    background-color: #030ABC;
+}
+
+#curatedPlaylists section {
+    background-color: #020873;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #590242;
+    padding-top: 13%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+
+.scroll,
+.playlistsScroll {
+    display: grid;
+    /* or display: flex; */
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    /* auto = height */
+    overflow-y: hidden;
+    /* 2.5 sections that are off the screen */
+}
+
+.scroll section,
+.playlistsScroll section {
+    margin: 10px;
+    position: relative;
+    /* keep it in the order its in HTML */
+}
+
+.scroll div {
+    position: absolute;
+    /* always be in relation to nearest element */
+    top: 251px;
+    background-color: rgba(255, 255, 255, 0.75);
+    /* targets label and artist name */
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+    color: #590242;
+}
+
+.scroll h3,
+.playlistsScroll h3 {
+    position: absolute;
+    bottom: 45%;
+}
+
+.scroll dl {
+    position: absolute;
+    top: 57%;
+}
+
+.scroll audio {
+    position: absolute;
+    z-index: 1;
+    top: 110px;
+    left: 5px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+    /* inside shadow */
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+#playlists ::-webkit-scrollbar,
+#curated ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#playlists ::-webkit-scrollbar-track,
+#curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+
+#playlists ::-webkit-scrollbar-thumb,
+#curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover,
+#curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+
+/*** HAMBURGER MENU START ***/
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before,
+label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked~ul {
+    max-height: 500px;
+}
+
+input:checked~label span {
+    background: transparent;
+}
+
+input:checked~label span:before {
+    transform: rotate(-45deg);
+}
+
+input:checked~label span:after {
+    transform: rotate(45deg);
+}
+
+input:checked~label:not(.steps) span:before,
+input:checked~label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width: 834px) {
+
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    label span,
+    input {
+        display: none;
+    }
+
+    /*** HAMBURGER MENU END ***/
+
+    body {
+        width: 834px;
+    }
+
+    nav {
+        height: 20%;
+        padding-bottom: 3%;
+    }
+
+    nav a {
+        padding: 4%;
+    }
+
+    li:not(:first-child) {
+        padding-top: 2%;
+        margin-left: 10%;
+        margin-top: 4%;
+    }
+
+    .homeTitle {
+        position: relative;
+        left: 0;
+    }
+
+    nav img {
+        position: relative;
+        top: 8%;
+        left: 25%;
+    }
+
+    #intro {
+        width: 90%;
+        padding: 6% 0 2% 35px;
+    }
+
+    button {
+        float: right;
+        margin-right: 2%;
+
+    }
+
+    #playlists h2 {
+        padding: 30px 0 0 35px;
+        margin-bottom: 0px;
+    }
+
+    #playlists {
+        display: inline-flex;
+    }
+
+    #playlists section section {
+        padding: 10px 10px 13px 10px;
+    }
+
+    #playlists div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .yourPlaylistClass {
+        float: left;
+    }
+
+    .curatedPlaylistClass {
+        float: right;
+    }
+
+    #yourPlaylists section {
+        display: flex;
+    }
+
+    #yourPlaylists div {
+        display: block;
+    }
+
+    #curatedPlaylists section {
+        display: flex;
+    }
+
+    #curatedPlaylists div {
+        display: block;
+    }
+
+    .playlistsScroll {
+        height: 480px;
+        display: grid;
+        /* or display: flex; */
+        grid-template-rows: repeat(5, 1fr);
+        overflow-y: scroll;
+    }
+
+    .playlistsScroll section {
+        margin: 10px;
+        position: relative;
+    }
+
+    footer {
+        padding-top: 5%;
+    }
+
+}
