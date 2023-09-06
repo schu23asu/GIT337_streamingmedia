@@ -291,12 +291,22 @@ footer p {
     background-color: #0D8DFB;
 }
 
+#yourPlaylists section:hover {
+    cursor: pointer;
+    background-color: #590242;
+}
+
 #curatedPlaylists {
     background-color: #030ABC;
 }
 
 #curatedPlaylists section {
     background-color: #020873;
+}
+
+#curatedPlaylists section:hover {
+    cursor: pointer;
+    background-color: #590242;
 }
 
 footer {
